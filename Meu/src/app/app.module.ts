@@ -5,13 +5,15 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { TopoComponent } from './Topo/Topo.component';
 import { RodapeComponent } from './rodape/rodape.component';
+import { NoticiasComponent } from './noticias/noticias.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TopoComponent,
-    RodapeComponent /* nome do componente que sera utilizado*/
+    RodapeComponent,
+    NoticiasComponent /* nome do componente que sera utilizado*/
   ],
   imports: [
     BrowserModule
