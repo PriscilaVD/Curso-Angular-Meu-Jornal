@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TopoComponent } from './Topo/Topo.component';
 import { RodapeComponent } from './rodape/rodape.component';
 import { NoticiasComponent } from './noticias/noticias.component';
+import { AlertaComponent } from './alerta/alerta.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { NoticiasComponent } from './noticias/noticias.component';
     AppComponent,
     TopoComponent,
     RodapeComponent,
-    NoticiasComponent /* nome do componente que sera utilizado*/
+    NoticiasComponent,
+    AlertaComponent /* nome do componente que sera utilizado*/
   ],
   imports: [
     BrowserModule

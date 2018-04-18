@@ -11,14 +11,22 @@ export class NoticiasComponent implements OnInit {
   "Noticia 1",
   "Noticia 2",
   "Noticia 3",
-  "Noticia 4"];
+  "Noticia 4"];/* criação da variavel tipo string, criação de  tamanho 4*/
     
+  mostrarNoticia: boolean = true;
+  /*quando entra no site, todas as noticas erao mostrdas, quando clica rno botao, vai aparecer uma noticia apenas*/
   
-  /* criação da variavel tipo string, criação de  tamanho 4*/
   
   constructor() { }
 
   ngOnInit() {
   }
-
+/*criação de método, esconder noticia*/
+public esconderNoticia (){
+  this.mostrarNoticia = false;
+  
+}
+public Voltar() {
+  this.mostrarNoticia = true;
+}
 }
