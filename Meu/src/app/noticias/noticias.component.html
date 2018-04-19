@@ -1,29 +1,41 @@
-<div class= "container">
-  <div class="row" *ngIf="mostrarNoticia; else noticiaUnica"><!--Mostrara a variavel mostrarNoticia,se não a noticia unica-->
-    <div class= "col-md-6" *ngFor ="let noticia of noticias"> <!-- dividir em noticias-->
+<div class="container">
+  <div class="row" *ngIf="mostrarNoticia; else noticiaUnica">
+    <!--Mostrara a variavel mostrarNoticia,se não a noticia unica-->
+    <div class="col-md-6" *ngFor="let noticia of noticias">
+      <!-- dividir em noticias-->
       <div class="jumbotron">
-        <h1 class="display-4">Hello, world!</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <h1 class="display-4">{{ titulo }}!</h1>
+        <p class="lead">{{ texto }}</p>
         <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-              <button (click)="esconderNoticia()" type="button" class="btn btn-dark">Leia Mais</button><!--Quando o botao  for clicado  chamar o metodo esconderNoticia-->
-              <app-alerta></app-alerta>
-            </div>
+        <div class="row">
+          <img class="tamanho" [src]="caminho_imagem">
+        </div>
+        <div class="row">
+          <button (click)="esconderNoticia()" type="button" class="btn btn-dark">Leia Mais</button>
+          <!--Quando o botao  for clicado  chamar o metodo esconderNoticia-->
+          <app-alerta></app-alerta>
+        </div>
+      </div>
     </div>
   </div>
-
 </div>
 <ng-template #noticiaUnica>
-<div class="row" >
-  <div class= "col-md-12">
-    <div class="jumbotron">
-      <h1 class="display-4">Hello, world!</h1>
-      <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-      <hr class="my-4">
-      <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-      <button (click)="Voltar()" class="btn btn-dark">Voltar</button>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="jumbotron">
+        <h1 class="display-4">Hello, world!</h1>
+        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or
+          information.</p>
+        <hr class="my-4">
+        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <button (click)="Voltar()" class="btn btn-dark">Voltar</button>
+      </div>
     </div>
   </div>
-</div>
-
+  <div class="row">
+    <app-primeiro-exemplo></app-primeiro-exemplo>
+    <app-segundo-exemplo></app-segundo-exemplo>
+    <app-terceiro-component></app-terceiro-component>
+  </div>
 </ng-template>
+

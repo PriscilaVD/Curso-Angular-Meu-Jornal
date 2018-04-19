@@ -1,0 +1,11 @@
+<div class="col-md-12">
+    <div class="jumbotron">
+        <h1 class="display-4">First Example</h1>
+        <p class="lead">Event Binding and Property Binding.</p>
+        <hr class="my-4">
+        <label for=""> What's your name?</label>
+       <input [value]= "name"(input)="atualizaNome($event)"
+       class="form-control form-control-lg" type="text" id="name">
+      <p>My name is {{ name }}</p>
+      </div>
+</div>

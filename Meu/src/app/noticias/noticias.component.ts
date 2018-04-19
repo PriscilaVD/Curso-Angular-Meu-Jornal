@@ -15,7 +15,9 @@ export class NoticiasComponent implements OnInit {
     
   mostrarNoticia: boolean = true;
   /*quando entra no site, todas as noticas erao mostrdas, quando clica rno botao, vai aparecer uma noticia apenas*/
-  
+  titulo: string = 'Curso Angular'; 
+  texto: string ='Utilizando string Interpolation';
+  caminho_imagem: string = '../../assets/praia.jpg';
   
   constructor() { }
 
